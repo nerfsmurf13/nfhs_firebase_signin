@@ -2,40 +2,112 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Document</title>
-	<link rel="stylesheet" href="./styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
 </head>
 
 <body>
-	<h1>Title</h1>
+    <h1>NFHS Tech Sign-In</h1>
+    <div id='first-name-screen' class='screen'>
+        <h2>First Name</h2>
+        <input type="text" id="first-name" placeholder="First Name" />
+        <i class="fi-cnsrxl-chevron-solid update"></i>
+    </div>
+    <div id='last-name-screen' class='screen'>
+        <h2>Last Name</h2>
+        <i class="fi-cnslxl-chevron-solid update"></i>
+        <input type="text" id="last-name" placeholder="Last Name" />
+        <i class="fi-cnsrxl-chevron-solid update"></i>
+    </div>
+    <div id='sid-screen' class='screen'>
+        <h2>Student ID</h2>
+        <i class="fi-cnslxl-chevron-solid update"></i>
+        <input type="text" id="sid" placeholder="S-ID Number" />
+        <i class="fi-cnsrxl-chevron-solid update"></i>
+    </div>
+    <div id='grade-screen' class='screen'>
+        <h2>Grade</h2>
+        <i class="fi-cnslxl-chevron-solid update"></i>
+        <button id="ninth-grade" value='9'>9th Grade</button>
+        <button id="tenth-grade" value='10'>10th Grade</button>
+        <button id="eleventh-grade" value='11'>11th Grade</button>
+        <button id="twelveth-grade" value='12'>12th Grade</button>
+        <i class="fi-cnsrxl-chevron-solid update"></i>
+    </div>
+    <div id='problem-screen' class='screen'>
+        <h2>Reason for Visit</h2>
+        <i class="fi-cnslxl-chevron-solid update"></i>
+        <button id="lost-device">Lost Device</button>
+        <button id="broken-device">Broken Device</button>
+        <button id="readyhub-issue">ReadyHub Issue</button>
+        <button id="payment">Payment</button>
+        <button id="pickup-dropoff">Pickup/Dropoff</button>
+        <button id="other">Other</button>
+        <i class="fi-cnsrxl-chevron-solid update"></i>
+    </div>
+    <!-- <div id="rfid-screen" class='screen'>
+        <h2>RF Number</h2>
+        <i class="fi-cnslxl-chevron-solid update"></i>
+        <input type="text" id="rfid" placeholder="RF-ID" />
+        <i class="fi-cnsrxl-chevron-solid update"></i>
+    </div> -->
+    <div class="screen" id="confirm">
+        <h2>Please Confirm</h2>
+        <i class="fi-cnslxl-chevron-solid update"></i>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><span class="confirm confirm-name">Demo Name</span></td>
 
-	<input type="text" id="name" />
-	<input type="text" id="sid" />
-	<button id="submit-button">Submit</button>
+            </tr>
+            <tr>
+                <td>ID: </td>
+                <td><span class="confirm confirm-id">555555</span></td>
 
-	<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+            </tr>
+            <tr>
+                <td>Grade: </td>
+                <td><span class="confirm confirm-grade">8</span></td>
 
-	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
-	<script>
-		var firebaseConfig = {
-			apiKey: "AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s",
-			authDomain: "nfhs-tech-signin.firebaseapp.com",
-			databaseURL: "https://nfhs-tech-signin.firebaseio.com",
-			projectId: "nfhs-tech-signin",
-			storageBucket: "nfhs-tech-signin.appspot.com",
-			messagingSenderId: "130967877703",
-			appId: "1:130967877703:web:7d798797b8a3ba4bcc9962",
-			measurementId: "G-KHB6GVJKV0",
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-	</script>
-	<script src="./js/app.js"></script>
+            </tr>
+            <tr>
+                <td>Issue: </td>
+                <td><span class="confirm confirm-issue">8</span></td>
+
+            </tr>
+        </table>
+
+        <button id="submit-button"><i class="fi-cwsuxl-check update"></i></button>
+    </div>
+
+
+
+    <!-- <button id="submit-button">Submit</button> -->
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s",
+            authDomain: "nfhs-tech-signin.firebaseapp.com",
+            databaseURL: "https://nfhs-tech-signin.firebaseio.com",
+            projectId: "nfhs-tech-signin",
+            storageBucket: "nfhs-tech-signin.appspot.com",
+            messagingSenderId: "130967877703",
+            appId: "1:130967877703:web:7d798797b8a3ba4bcc9962",
+            measurementId: "G-KHB6GVJKV0",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

@@ -2,3 +2,46 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    text-align: center;
+    font-size: 2em;
+    color: #ffce5d;
+    /* background-color: #f8f8f8; */
+    background: linear-gradient(135deg, hsl(160, 94%, 19%), #124534);
+}
+
+input[type=text] {
+    border-width: 0;
+    border-radius: 1em;
+    font-size: 2em;
+    width: 50%;
+    padding: 0 .5em;
+    text-align: center;
+}
+
+i {
+    font-size: 1.8em;
+}
+
+table {
+    justify-content: center;
+}
+
+table td {
+    text-align: left;
+    width: 30%;
+}
+
+table td:nth-of-type(1) {
+    text-align: right;
+}
+
+.screen {
+    border: 1px solid black;
+    height: 98vh;
+}
+
+.hide {
+    display: none;
+}
