@@ -6,10 +6,12 @@
 
 h1 {
     font-size: 3em;
+    background-color: rgba(0, 0, 0, .4)
 }
 
 h2 {
     font-size: 3em;
+    padding-bottom: .8em;
 }
 
 body {
@@ -95,16 +97,29 @@ table {
     justify-content: center;
     width: 100%;
     font-size: 3rem;
+    border: 0;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #124534;
+
 }
 
 table td {
     text-align: left;
     width: 30%;
+    padding: 0 10px;
+}
+
+ul {
+    list-style: none;
 }
 
 table td:nth-of-type(1) {
     text-align: right;
 }
+
+
 
 .screen {
     /* border: 1px solid black; */

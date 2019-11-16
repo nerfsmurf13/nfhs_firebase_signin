@@ -86,16 +86,23 @@ for (const button of problemButtons) {
 
 //Confirmation Data
 const confirmData = () => {
+
 	var confirmScreen = document.getElementById('confirm')
 	confirmScreen.querySelector('.confirm-name').textContent = student.firstName + " " + student.lastName
 	confirmScreen.querySelector('.confirm-id').textContent = student.sid
 	confirmScreen.querySelector('.confirm-grade').textContent = student.grade
-	confirmScreen.querySelector('.confirm-issue').textContent = student.problem
+	confirmScreen.querySelector('.confirm-issue').innerHTML = ''
+	for (x = 0; x < student.problem.length; x++) {
+		var li = document.createElement('LI')
+		var text = student.problem[x]
+		li.textContent = text
+		confirmScreen.querySelector('.confirm-issue').appendChild(li)
+	}
 }
 
 //Screen Selector Logic
 const screenControl = (con) => {
-	console.log(screen)
+	// console.log(screen)
 	if (con == 1) {
 		if (screen == 0 && student.firstName != '') {
 			screen++
