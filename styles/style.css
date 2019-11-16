@@ -1,31 +1,91 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 4em;
 }
 
 body {
+    width: 100vw;
     text-align: center;
-    font-size: 2em;
     color: #ffce5d;
     /* background-color: #f8f8f8; */
     background: linear-gradient(135deg, hsl(160, 94%, 19%), #124534);
 }
 
 input[type=text] {
+    width: 90%;
+    height: 90px;
     border-width: 0;
     border-radius: 1em;
     font-size: 2em;
-    width: 50%;
     padding: 0 .5em;
     text-align: center;
 }
 
+.header {
+    height: 10vh;
+}
+
+.left,
+.right {
+    width: 15vw;
+    height: 3em
+}
+
+.center {
+    width: 70vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-button,
+img {
+    height: 200%;
+}
+
+
+
+button {
+    border: 5px solid #ffce5d;
+    background-color: #124534;
+    border-radius: .5em;
+    color: #ffce5d;
+    cursor: pointer;
+    font-size: 5em;
+    margin: .2em;
+    padding: .1em;
+}
+
+.active {
+    border: 5px solid #ffce5d;
+    background-color: #ffce5d;
+    border-radius: .5em;
+    color: #124534;
+    cursor: pointer;
+    font-size: 5em;
+    box-shadow: 2px 2px 20px black;
+}
+
 i {
-    font-size: 1.8em;
+    font-size: auto;
+    width: 100px;
+    height: 100px;
 }
 
 table {
     justify-content: center;
+    width: 100%;
 }
 
 table td {
@@ -38,8 +98,8 @@ table td:nth-of-type(1) {
 }
 
 .screen {
-    border: 1px solid black;
-    height: 98vh;
+    /* border: 1px solid black; */
+    height: 90vh;
 }
 
 .hide {
