@@ -1,18 +1,26 @@
-console.log("JS Loaded");
+// console.log("JS Loaded");
 
-const testFire = () => {
-	console.log("gotem");
-};
+// const testFire = () => {
+// 	console.log("gotem");
+// };
 
+//change screens for testing
+//change 0 for production release
 var screen = 0
-
+//0-Firstname
+//1-Lastname
+//2-Sid
+//3-Grade
+//4-Problem
+//5-confirm
+//6-thanks
 
 var student = {
 	timestamp: '',
 	firstName: '',
 	lastName: '',
 	sid: '',
-	grade: '',
+	grade: null,
 	problem: [],
 	rfid: '',
 	notes: ''
@@ -30,6 +38,7 @@ var writeData = () => {
 		problem: student.problem,
 		notes: ''
 	});
+	setTimeout(() => { location.reload() }, 5000)
 }
 const submitButton = document.querySelector("#submit-button");
 
@@ -44,7 +53,7 @@ for (const button of updates) {
 		student.sid = document.getElementById("sid").value
 		//student.rfid = document.getElementById("rfid").value  //RF ID value removed
 		confirmData()
-		console.log(student)
+		//console.log(student)
 	})
 }
 
@@ -71,7 +80,7 @@ for (const button of problemButtons) {
 			student.problem.splice(student.problem.indexOf(button.textContent), 1)
 			e.target.classList.remove("active")
 		}
-		console.log(student)
+		//console.log(student)
 	})
 }
 
@@ -86,37 +95,38 @@ const confirmData = () => {
 
 //Screen Selector Logic
 const screenControl = (con) => {
+	console.log(screen)
 	if (con == 1) {
 		if (screen == 0 && student.firstName != '') {
 			screen++
 		}
-		if (screen == 1 && student.lastName != '') {
+		else if (screen == 1 && student.lastName != '') {
 			screen++
 		}
-		if (screen == 2 && student.sid != '') {
+		else if (screen == 2 && student.sid != '') {
 			screen++
 		}
-		if (screen == 3 && student.grade != '') {
+		else if (screen == 3 && student.grade != null) {
 			screen++
 		}
-		if (screen == 4 && student.problem != '') {
+		else if (screen == 4 && student.problem != []) {
 			screen++
 		}
-		else {
+		else if (screen == 5) {
 			screen++
 		}
-
 	} else {
 		screen--
 	}
+
 	screenCheck(screen)
 }
 //screenCheck(screen)
 const screenCheck = (on) => {
 	var screens = document.getElementsByClassName('screen')
-	console.log(screens)
+	//console.log(screens)
 	for (x = 0; x < screens.length; x++) {
-		console.log(x)
+		//console.log(x)
 		if (x == on) {
 			screens[x].classList.remove('hide')
 		} else {
@@ -136,11 +146,9 @@ for (const button of backButtons) {
 }
 submitButton.addEventListener("click", writeData);
 
-//Submit Reset Timer
-const complete = () => {
-	setTimeout(() => { location.reload() }, 5000)
-}
+// //Submit Reset Timer
+// const complete = () => {
+// 	setTimeout(() => { location.reload() }, 5000)
+// }
 
-
-submitButton.addEventListener("click", complete)
-screenCheck(screen)
+// submitButton.addEventListener("click", complete)
