@@ -12,7 +12,7 @@ var student = {
 	firstName: '',
 	lastName: '',
 	sid: '',
-	grade: null,
+	grade: '',
 	problem: [],
 	rfid: '',
 	notes: ''
@@ -87,13 +87,31 @@ const confirmData = () => {
 //Screen Selector Logic
 const screenControl = (con) => {
 	if (con == 1) {
-		screen++
+		if (screen == 0 && student.firstName != '') {
+			screen++
+		}
+		if (screen == 1 && student.lastName != '') {
+			screen++
+		}
+		if (screen == 2 && student.sid != '') {
+			screen++
+		}
+		if (screen == 3 && student.grade != '') {
+			screen++
+		}
+		if (screen == 4 && student.problem != '') {
+			screen++
+		}
+		else {
+			screen++
+		}
+
 	} else {
 		screen--
 	}
 	screenCheck(screen)
 }
-
+//screenCheck(screen)
 const screenCheck = (on) => {
 	var screens = document.getElementsByClassName('screen')
 	console.log(screens)
@@ -118,4 +136,11 @@ for (const button of backButtons) {
 }
 submitButton.addEventListener("click", writeData);
 
-//screenCheck(screen)
+//Submit Reset Timer
+const complete = () => {
+	setTimeout(() => { location.reload() }, 5000)
+}
+
+
+submitButton.addEventListener("click", complete)
+screenCheck(screen)

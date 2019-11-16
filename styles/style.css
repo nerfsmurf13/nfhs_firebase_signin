@@ -5,11 +5,11 @@
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 h2 {
-    font-size: 4em;
+    font-size: 3em;
 }
 
 body {
@@ -54,15 +54,13 @@ img {
     height: 200%;
 }
 
-
-
 button {
     border: 5px solid #ffce5d;
     background-color: #124534;
     border-radius: .5em;
     color: #ffce5d;
     cursor: pointer;
-    font-size: 5em;
+    font-size: 3em;
     margin: .2em;
     padding: .1em;
 }
@@ -73,7 +71,7 @@ button {
     border-radius: .5em;
     color: #124534;
     cursor: pointer;
-    font-size: 5em;
+    font-size: 3em;
     box-shadow: 2px 2px 20px black;
 }
 
@@ -86,6 +84,7 @@ i {
 table {
     justify-content: center;
     width: 100%;
+    font-size: 3rem;
 }
 
 table td {
