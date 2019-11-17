@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Backend Sign-in Sheet</title>
+		<link rel="stylesheet" href="./styles/backend.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<script defer src="https://friconix.com/cdn/friconix.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="title">
+				<h1>BackEnd!</h1>
+			</div>
+			<div class="search">
+				<input type="text" name="search" id="search-box" placeholder="Search" />
+			</div>
+		</div>
+
+		<div class="list-container">
+			<div class="list-item-title">
+				<div class="name">Last, First</div>
+				<div class="grade">Gr.</div>
+				<div class="sid">Student ID</div>
+				<div class="problem">Problem</div>
+				<div class="notes">Notes</div>
+				<div class="time">Time</div>
+				<div class="controls">Update</div>
+			</div>
+			<div id="signin-list">
+				<!-- <div class="list-item">
+					<div class="name">John, Snow</div>
+					<div class="grade">10</div>
+					<div class="sid">123456 <i class="fi-xnluxl-copy"></i></div>
+					<div class="problem">Issue 1, Issue 2, Issue 3</div>
+					<div class="notes">Lost 5 devices</div>
+					<div class="time">Fri Nov 15 2019 8:56:48 PM</div>
+					<div class="controls">
+						<i class="fi-xnsuxl-edit-solid"></i>
+						<i class="fi-cwsuxl-check hide"></i>
+						<img src="./images/trash-svg.svg" />
+					</div>
+				</div>
+				<div class="list-item">
+					<div class="name">John, Snow</div>
+					<div class="grade">10</div>
+					<div class="sid">456741 <i class="fi-xnluxl-copy"></i></div>
+					<div class="problem">Issue 1, Issue 2, Issue 3</div>
+					<div class="notes">Lost 5 devices</div>
+					<div class="time">Fri Nov 15 2019 8:56:48 PM</div>
+					<div class="controls">
+						<i class="fi-xnsuxl-edit-solid"></i>
+						<i class="fi-cwsuxl-check hide"></i>
+						<i class="fi-xnsuxl-trash-bin"></i>
+					</div>
+				</div>
+				<div class="list-item">
+					<div class="name">John, Snow</div>
+					<div class="grade">10</div>
+					<div class="sid">999999 <i class="fi-xnluxl-copy"></i></div>
+					<div class="problem">Issue 1, Issue 2, Issue 3</div>
+					<div class="notes">Lost 5 devices</div>
+					<div class="time">Fri Nov 15 2019 8:56:48 PM</div>
+					<div class="controls">
+						<i class="fi-xnsuxl-edit-solid"></i>
+						<i class="fi-cwsuxl-check hide"></i>
+						<i class="fi-xnsuxl-trash-bin"></i>
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+		<script>
+			var firebaseConfig = {
+				apiKey: 'AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s',
+				authDomain: 'nfhs-tech-signin.firebaseapp.com',
+				databaseURL: 'https://nfhs-tech-signin.firebaseio.com',
+				projectId: 'nfhs-tech-signin',
+				storageBucket: 'nfhs-tech-signin.appspot.com',
+				messagingSenderId: '130967877703',
+				appId: '1:130967877703:web:7d798797b8a3ba4bcc9962',
+				measurementId: 'G-KHB6GVJKV0',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
+		<script src="./js/backend.js"></script>
+	</body>
+</html>
