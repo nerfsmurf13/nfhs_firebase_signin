@@ -24,13 +24,16 @@ const signInList = document.getElementById('signin-list');
 // };
 // startListening();
 
-firebase
-	.database()
-	.ref('students/')
-	.on('child_changed', function(snapshot) {
-		//var changedPost = snapshot.val();
-		console.log('Changes');
-	});
+// var startListening = function() {
+// 	firebase
+// 		.database()
+// 		.ref('students/')
+// 		.on('child_changed', function(snapshot) {
+// 			//var changedPost = snapshot.val();
+// 			console.log('Changes');
+// 		});
+// };
+// startListening();
 
 var removeData = signinListing => {
 	var e = signinListing;
