@@ -2,148 +2,147 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Naaman Forest Sign-in Sheet</title>
-	<link rel="stylesheet" href="./styles/style.css" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Naaman Forest Sign-in Sheet</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
 </head>
 
 <body>
-	<div class="header">
-		<h1>NFHS Tech Sign-In</h1>
-	</div>
+    <div class="header">
+        <h1>NFHS Tech Sign-In</h1>
+    </div>
 
-	<div id='first-name-screen' class='screen'>
-		<h2>First Name</h2>
-		<div class="content">
-			<div class="left">
-				<i class="fi-cnsrxl-chevron-solid update" style="visibility:hidden;"></i>
-			</div>
-			<div class="center">
-				<input type="text" id="first-name" placeholder="First Name" />
-			</div>
-			<div class="right">
-				<img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg">
-			</div>
-		</div>
+    <div id='first-name-screen' class='screen'>
+        <h2>First Name</h2>
+        <div class="content">
+            <div class="left">
+                <i class="fi-cnsrxl-chevron-solid update" style="visibility:hidden;"></i>
+            </div>
+            <div class="center">
+                <input type="text" id="first-name" placeholder="First Name" />
+            </div>
+            <div class="right">
+                <img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg">
+            </div>
+        </div>
 
-	</div>
-	<div id='last-name-screen' class='screen hide'>
-		<h2>Last Name</h2>
-		<div class="content">
-			<div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
-			<div class="center">
-				<input type="text" id="last-name" placeholder="Last Name" /></div>
-			<div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
-		</div>
+    </div>
+    <div id='last-name-screen' class='screen hide'>
+        <h2>Last Name</h2>
+        <div class="content">
+            <div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
+            <div class="center">
+                <input type="text" id="last-name" placeholder="Last Name" /></div>
+            <div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
+        </div>
 
 
-	</div>
-	<div id='sid-screen' class='screen hide'>
-		<h2>Student ID</h2>
-		<div class="content">
-			<div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
-			<div class="center">
-				<input type="number" id="sid" placeholder="S-ID Number" /></div>
-			<div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
-			</i>
-		</div>
+    </div>
+    <div id='sid-screen' class='screen hide'>
+        <h2>Student ID</h2>
+        <div class="content">
+            <div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
+            <div class="center">
+                <input type="text" id="sid" placeholder="ID Number" inputmode="numeric" pattern="[0-9]*" /></div>
+            <div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
+            </i>
+        </div>
 
-	</div>
-	<div id='grade-screen' class='screen hide'>
-		<h2>Grade</h2>
-		<div class="content">
-			<div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
-			<div class="center">
-				<button id="ninth-grade" value='9'>9th Grade</button>
-				<button id="tenth-grade" value='10'>10th Grade</button>
-				<button id="eleventh-grade" value='11'>11th Grade</button>
-				<button id="twelveth-grade" value='12'>12th Grade</button>
-			</div>
-			<div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
+    </div>
+    <div id='grade-screen' class='screen hide'>
+        <h2>Grade</h2>
+        <div class="content">
+            <div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
+            <div class="center">
+                <button id="ninth-grade" value='9'>9th Grade</button>
+                <button id="tenth-grade" value='10'>10th Grade</button>
+                <button id="eleventh-grade" value='11'>11th Grade</button>
+                <button id="twelveth-grade" value='12'>12th Grade</button>
+            </div>
+            <div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
 
-		</div>
-	</div>
-	<div id='problem-screen' class='screen hide'>
-		<h2>Reason for Visit</h2>
-		<div class="content">
-			<div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
+        </div>
+    </div>
+    <div id='problem-screen' class='screen hide'>
+        <h2>Reason for Visit</h2>
+        <div class="content">
+            <div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
 
-			<div class="center">
-				<button id="lost-device">Lost Device</button>
-				<button id="broken-device">Broken Device</button>
-				<button id="readyhub-issue">ReadyHub Issue</button>
-				<button id="payment">Payment</button>
-				<button id="pickup-dropoff" class="">Pickup/Dropoff</button>
-				<button id="other">Other</button>
+            <div class="center">
+                <button id="lost-device">Lost Device</button>
+                <button id="broken-device">Broken Device</button>
+                <button id="readyhub-issue">ReadyHub Issue</button>
+                <button id="payment">Payment</button>
+                <button id="pickup-dropoff" class="">Pickup/Dropoff</button>
+                <button id="other">Other</button>
 
-			</div>
-			<div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
-		</div>
-	</div>
-	<div id="confirm" class="screen hide">
-		<h2>Please Confirm</h2>
-		<div class="content">
-			<div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
-			<div class="center">
-				<table>
-					<tr>
-						<td>Name: </td>
-						<td><span class="confirm confirm-name">Demo Name</span></td>
-					</tr>
-					<tr>
-						<td>ID: </td>
-						<td><span class="confirm confirm-id">555555</span></td>
-					</tr>
-					<tr>
-						<td>Grade: </td>
-						<td><span class="confirm confirm-grade">8</span></td>
-					</tr>
-					<tr>
-						<td>Issue(s): </td>
-						<td>
-							<ul class="confirm confirm-issue"></ul>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="right"><img class="nav-button next update complete" id="submit-button"
-					src="./images/fi-cnsrxl-chevron-solid.svg">
-			</div>
-		</div>
-	</div>
-	<div class="screen hide" id="thanks">
-		<h2 style="margin:3rem;">Completed!</h2>
-		<div class="content">
-			<div class="left"></div>
-			<div class="center">
-				<h2>Thanks!</h2>
-			</div>
-			<div class="right"></div>
-		</div>
-	</div>
-	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
-	<script>
-		var firebaseConfig = {
-			apiKey: "AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s",
-			authDomain: "nfhs-tech-signin.firebaseapp.com",
-			databaseURL: "https://nfhs-tech-signin.firebaseio.com",
-			projectId: "nfhs-tech-signin",
-			storageBucket: "nfhs-tech-signin.appspot.com",
-			messagingSenderId: "130967877703",
-			appId: "1:130967877703:web:7d798797b8a3ba4bcc9962",
-			measurementId: "G-KHB6GVJKV0",
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-	</script>
-	<script src="./js/app.js"></script>
+            </div>
+            <div class="right"><img class="nav-button next update" src="./images/fi-cnsrxl-chevron-solid.svg"></div>
+        </div>
+    </div>
+    <div id="confirm" class="screen hide">
+        <h2>Please Confirm</h2>
+        <div class="content">
+            <div class="left"><img class="nav-button back update" src="./images/fi-cnslxl-chevron-solid.svg"></div>
+            <div class="center">
+                <table>
+                    <tr>
+                        <td>Name: </td>
+                        <td><span class="confirm confirm-name">Demo Name</span></td>
+                    </tr>
+                    <tr>
+                        <td>ID: </td>
+                        <td><span class="confirm confirm-id">555555</span></td>
+                    </tr>
+                    <tr>
+                        <td>Grade: </td>
+                        <td><span class="confirm confirm-grade">8</span></td>
+                    </tr>
+                    <tr>
+                        <td>Issue(s): </td>
+                        <td>
+                            <ul class="confirm confirm-issue"></ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right"><img class="nav-button next update complete" id="submit-button" src="./images/fi-cnsrxl-chevron-solid.svg">
+            </div>
+        </div>
+    </div>
+    <div class="screen hide" id="thanks">
+        <h2 style="margin:3rem;">Completed!</h2>
+        <div class="content">
+            <div class="left"></div>
+            <div class="center">
+                <h2>Thanks!</h2>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s",
+            authDomain: "nfhs-tech-signin.firebaseapp.com",
+            databaseURL: "https://nfhs-tech-signin.firebaseio.com",
+            projectId: "nfhs-tech-signin",
+            storageBucket: "nfhs-tech-signin.appspot.com",
+            messagingSenderId: "130967877703",
+            appId: "1:130967877703:web:7d798797b8a3ba4bcc9962",
+            measurementId: "G-KHB6GVJKV0",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
