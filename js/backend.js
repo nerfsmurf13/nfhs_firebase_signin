@@ -24,6 +24,14 @@ const signInList = document.getElementById('signin-list');
 // };
 // startListening();
 
+firebase
+	.database()
+	.ref('students/')
+	.on('child_changed', function(snapshot) {
+		//var changedPost = snapshot.val();
+		console.log('Changes');
+	});
+
 var removeData = signinListing => {
 	var e = signinListing;
 	firebase
