@@ -1,98 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Backend Sign-in Sheet</title>
-		<link rel="stylesheet" href="./styles/backend.css" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
-			rel="stylesheet"
-		/>
-		<script defer src="https://friconix.com/cdn/friconix.js"></script>
-	</head>
 
-	<body>
-		<div class="header">
-			<div class="title">
-				<h1>BackEnd!</h1>
-			</div>
-			<div class="search">
-				<input type="text" name="search" id="search-box" placeholder="Search" />
-			</div>
-		</div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Backend Sign-in Sheet</title>
+    <link rel="stylesheet" href="./styles/backend.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+</head>
 
-		<div class="list-container">
-			<div class="list-item-title">
-				<div class="name">Last, First</div>
-				<div class="grade">Gr.</div>
-				<div class="sid">Student ID</div>
-				<div class="problem">Problem</div>
-				<div class="notes">Notes</div>
-				<div class="time">Time</div>
-				<div class="controls">Update</div>
-			</div>
-			<div id="signin-list">
-				<!-- <div class="list-item">
-					<div class="name">John, Snow</div>
-					<div class="grade">10</div>
-					<div class="sid">123456 <i class="fi-xnluxl-copy"></i></div>
-					<div class="problem">Issue 1, Issue 2, Issue 3</div>
-					<div class="notes">Lost 5 devices</div>
-					<div class="time">Fri Nov 15 2019 8:56:48 PM</div>
-					<div class="controls">
-						<i class="fi-xnsuxl-edit-solid"></i>
-						<i class="fi-cwsuxl-check hide"></i>
-						<img src="./images/trash-svg.svg" />
-					</div>
-				</div>
-				<div class="list-item">
-					<div class="name">John, Snow</div>
-					<div class="grade">10</div>
-					<div class="sid">456741 <i class="fi-xnluxl-copy"></i></div>
-					<div class="problem">Issue 1, Issue 2, Issue 3</div>
-					<div class="notes">Lost 5 devices</div>
-					<div class="time">Fri Nov 15 2019 8:56:48 PM</div>
-					<div class="controls">
-						<i class="fi-xnsuxl-edit-solid"></i>
-						<i class="fi-cwsuxl-check hide"></i>
-						<i class="fi-xnsuxl-trash-bin"></i>
-					</div>
-				</div>
-				<div class="list-item">
-					<div class="name">John, Snow</div>
-					<div class="grade">10</div>
-					<div class="sid">999999 <i class="fi-xnluxl-copy"></i></div>
-					<div class="problem">Issue 1, Issue 2, Issue 3</div>
-					<div class="notes">Lost 5 devices</div>
-					<div class="time">Fri Nov 15 2019 8:56:48 PM</div>
-					<div class="controls">
-						<i class="fi-xnsuxl-edit-solid"></i>
-						<i class="fi-cwsuxl-check hide"></i>
-						<i class="fi-xnsuxl-trash-bin"></i>
-					</div>
-				</div> -->
-			</div>
-		</div>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1>NFHS Signin Console</h1>
+        </div>
+        <div class="search">
+            <input type="text" name="search" id="search-box" placeholder="Search" />
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="logged-out">
+                    <a href="#" class="modal-trigger" data-target="modal-signin">Login</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="modal-trigger" data-target="modal-account">Account</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" id="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
-		<script>
-			var firebaseConfig = {
-				apiKey: 'AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s',
-				authDomain: 'nfhs-tech-signin.firebaseapp.com',
-				databaseURL: 'https://nfhs-tech-signin.firebaseio.com',
-				projectId: 'nfhs-tech-signin',
-				storageBucket: 'nfhs-tech-signin.appspot.com',
-				messagingSenderId: '130967877703',
-				appId: '1:130967877703:web:7d798797b8a3ba4bcc9962',
-				measurementId: 'G-KHB6GVJKV0',
-			};
-			// Initialize Firebase
-			firebase.initializeApp(firebaseConfig);
-		</script>
-		<script src="./js/backend.js"></script>
-	</body>
+    <div class="list-container">
+        <div class="list-item-title">
+            <div class="name">Last, First</div>
+            <div class="grade">Gr.</div>
+            <div class="sid">Student ID</div>
+            <div class="problem">Problem</div>
+            <div class="notes">Notes</div>
+            <div class="time">Time</div>
+            <div class="controls">Update</div>
+        </div>
+        <div id="signin-list">
+        </div>
+    </div>
+
+    <div id="modal-signin" class="modal">
+        <div class="modal-content">
+            <h4>Log-in</h4>
+            <form id="login-form">
+                <div>
+                    <input type="email" name="" id="login-email">
+                    <label for="login-email">Email Address</label>
+                </div>
+                <div>
+                    <input type="password" name="" id="login-password">
+                    <label for="login-password">Password</label>
+                </div>
+                <button class="btn">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-account" class="modal">
+        <div class="modal-content">
+            <h4>Account</h4>
+            <div class="details"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: 'AIzaSyC9n_7WOdEr-TZty8cPC9gRUg28QobN6_s',
+            authDomain: 'nfhs-tech-signin.firebaseapp.com',
+            databaseURL: 'https://nfhs-tech-signin.firebaseio.com',
+            projectId: 'nfhs-tech-signin',
+            storageBucket: 'nfhs-tech-signin.appspot.com',
+            messagingSenderId: '130967877703',
+            appId: '1:130967877703:web:7d798797b8a3ba4bcc9962',
+            measurementId: 'G-KHB6GVJKV0',
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //auth refs
+        const auth = firebase.auth();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="./js/backend.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+
 </html>

@@ -102,7 +102,6 @@ table {
 
 table tbody tr:nth-of-type(even) {
     background-color: #124534;
-
 }
 
 table td {
@@ -118,8 +117,6 @@ ul {
 table td:nth-of-type(1) {
     text-align: right;
 }
-
-
 
 .screen {
     /* border: 1px solid black; */

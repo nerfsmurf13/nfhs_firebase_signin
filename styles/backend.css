@@ -1,108 +1,130 @@
 * {
-	padding: 0;
-	margin: 0;
-	font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-	width: 100vw;
-	text-align: center;
-	color: #ffce5d;
-	/* background-color: #f8f8f8; */
-	background: linear-gradient(135deg, hsl(160, 94%, 19%), #124534);
+    width: 100%;
+    text-align: center;
+    color: #ffce5d;
+    /* background-color: #f8f8f8; */
+    background: linear-gradient(135deg, hsl(160, 94%, 19%), #124534);
+    background-attachment: fixed;
 }
 
 .header {
-	display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    border: 1px solid black;
+    min-width: 200px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .list-container {
-	border-radius: 1em;
-	border: 1px solid black;
-	margin: 2em;
-	background-color: antiquewhite;
-	color: black;
-	box-shadow: 3px 3px 3px black;
+    border-radius: 1em;
+    border: 1px solid black;
+    margin: 1rem 2rem;
+    background-color: antiquewhite;
+    color: black;
+    box-shadow: 3px 3px 3px black;
 }
+
 #signin-list {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
 }
 
 .list-item-title {
-	display: flex;
-	border: 1px dotted black;
+    display: flex;
+    border: 1px dotted black;
 }
 
 .list-item {
-	display: flex;
-	border: 1px dotted black;
+    display: flex;
+    border: 1px dotted black;
 }
 
 .name {
-	display: flex;
-	margin-left: 1rem;
-	align-items: center;
-	width: 15vw;
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    width: 15vw;
 }
 
 .grade {
-	display: flex;
-	margin-left: 1rem;
-	align-items: center;
-	width: 5vw;
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    width: 5vw;
 }
 
 .sid {
-	font-family: 'Roboto Mono', monospace;
-	display: flex;
-	margin-left: 1rem;
-	align-items: center;
-	width: 10vw;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    width: 10vw;
 }
 
 .problem {
-	width: 17vw;
-	display: flex;
-	flex-flow: column;
-	margin-left: 1rem;
-	align-items: center;
+    width: 17vw;
+    display: flex;
+    flex-flow: column;
+    margin-left: 1rem;
+    align-items: center;
 }
 
 .notes {
-	display: flex;
-	margin-left: 1rem;
-	align-items: center;
-	width: 17vw;
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    width: 17vw;
 }
 
 .time {
-	display: flex;
-	margin-left: 1rem;
-	align-items: center;
-	width: 25vw;
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+    width: 25vw;
 }
+
 .controls {
-	display: flex;
-	margin-left: 1rem;
-	justify-content: center;
-	align-items: center;
-	width: 11vw;
+    display: flex;
+    margin-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 11vw;
 }
-.fi-xnsuxl-edit-solid {
-}
+
+.fi-xnsuxl-edit-solid {}
+
 .fi-cwsuxl-check {
-	color: green;
+    color: green;
 }
+
 .fi-xnsuxl-trash-bin {
-	color: darkred;
+    color: darkred;
 }
 
 .hide {
-	display: none;
+    display: none;
 }
 
 .controls img {
-	height: 25px;
+    height: 25px;
 }
