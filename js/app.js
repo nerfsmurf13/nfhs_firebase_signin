@@ -116,13 +116,8 @@ const screenControl = con => {
     if (con == 1) {
         if (screen == 0 && student.firstName != '') {
             screen++;
-            getFocus('first-name')
-            console.log('NEXT')
         } else if (screen == 1 && student.lastName != '') {
-
             screen++;
-            getFocus('last-name')
-            console.log('NEXT')
         } else if (screen == 2 && student.sid != '') {
             screen++;
         } else if (screen == 3 && student.grade != null) {
@@ -155,7 +150,8 @@ function focus() {
         console.log('Focusing sid')
     }
 }
-
+//run focus to always select first name on page reload
+focus()
 
 //screenCheck(screen)
 const screenCheck = on => {
@@ -192,6 +188,8 @@ submitButton.addEventListener('click', writeData);
 // const complete = () => {
 // 	setTimeout(() => { location.reload() }, 5000)
 // }
+
+
 
 // submitButton.addEventListener("click", complete)
 document.ontouchmove = function(event) {
