@@ -73,6 +73,7 @@ for (const button of gradeButtons) {
             button2.classList.remove('active');
         }
         e.target.classList.add('active');
+        console.log(student)
     });
 }
 
@@ -89,7 +90,7 @@ for (const button of problemButtons) {
             student.problem.splice(student.problem.indexOf(button.textContent), 1);
             e.target.classList.remove('active');
         }
-        //console.log(student)
+        console.log(student)
     });
 }
 
@@ -115,13 +116,18 @@ const screenControl = con => {
     if (con == 1) {
         if (screen == 0 && student.firstName != '') {
             screen++;
+            getFocus('first-name')
+            console.log('NEXT')
         } else if (screen == 1 && student.lastName != '') {
+
             screen++;
+            getFocus('last-name')
+            console.log('NEXT')
         } else if (screen == 2 && student.sid != '') {
             screen++;
         } else if (screen == 3 && student.grade != null) {
             screen++;
-        } else if (screen == 4 && student.problem != []) {
+        } else if (screen == 4 && student.problem.length != 0) {
             screen++;
         } else if (screen == 5) {
             screen++;
@@ -132,6 +138,25 @@ const screenControl = con => {
 
     screenCheck(screen);
 };
+//focus textbox
+function getFocus(theId) {
+    document.getElementById(theId).focus();
+}
+
+function focus() {
+    if (screen == 0) {
+        getFocus('first-name')
+        console.log('Focusing FisrtName')
+    } else if (screen == 1) {
+        getFocus('last-name')
+        console.log('Focusing LastName')
+    } else if (screen == 2) {
+        getFocus('sid')
+        console.log('Focusing sid')
+    }
+}
+
+
 //screenCheck(screen)
 const screenCheck = on => {
     var screens = document.getElementsByClassName('screen');
@@ -151,12 +176,14 @@ const nextButtons = document.getElementsByClassName('next');
 for (const button of nextButtons) {
     button.addEventListener('click', e => {
         screenControl(1);
+        focus();
     });
 }
 const backButtons = document.getElementsByClassName('back');
 for (const button of backButtons) {
     button.addEventListener('click', e => {
         screenControl(-1);
+        focus();
     });
 }
 submitButton.addEventListener('click', writeData);

@@ -98,6 +98,7 @@ table {
     width: 100%;
     font-size: 3rem;
     border: 0;
+    border-collapse: collapse;
 }
 
 table tbody tr:nth-of-type(even) {
